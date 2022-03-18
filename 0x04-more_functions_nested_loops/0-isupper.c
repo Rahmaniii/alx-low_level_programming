@@ -2,8 +2,8 @@
 
 /**
  * _isupper - checks for uppercase
- *@c: whats being checked
- * Result(0);
+ * @c: whats being checked
+ * Return: (0)
  */
 
 int _isupper(int c)
@@ -11,5 +11,5 @@ int _isupper(int c)
 	if (c >= 'A' || c <= 'Z')
 		return (1);
 	else
-		return(0);
+		return (0);
 }
