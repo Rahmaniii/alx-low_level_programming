@@ -1,20 +1,24 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * malloc_checked - allocates memory using malloc
- * @b: size to malloc
- * Return: pointer to allocated memory
+ * _calloc - allocates memory for an array, using malloc.
+ * @nmemb: number of elements in the array
+ * @size: size in bytes of the elements
+ *
+ * Return: void pointer to allocated memory
  */
-
-void *malloc_checked(unsigned int b)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
+	char *p;
+	unsigned int i;
 
-	ptr = malloc(b);
-
-	if (ptr == NULL)
-		exit(98);
-
-	return (ptr);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	p = malloc(nmemb * size);
+	if (p == NULL)
+		return (NULL);
+	for (i = 0; i < (nmemb * size); i++)
+		p[i] = 0;
+	return (p);
 }
