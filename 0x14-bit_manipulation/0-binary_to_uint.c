@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * binary_to_unit - converts a number from binary to unit
+ * binary_to_uint - converts a number from binary to unit
  * @b: number to be conveted
  * Return: converted number (1)
  */
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int i;
 	unsigned int num;
